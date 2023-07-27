@@ -1,0 +1,72 @@
+create table login (id VARCHAR2(20) PRIMARY KEY, PASSWORD VARCHAR2(30), AUTHORITY VARCHAR2(20)); 
+create table a_process (num number(5), tf1 number(1), csize NUMBER(10), cspeed NUMBER(2), SC1 NUMBER(5), FC1 NUMBER(5), TIME1 TIMESTAMP DEFAULT SYSTIMESTAMP);
+create table b_process (num number(5), tf2 number(1), temperature number(5), SC2 NUMBER(5), FC2 NUMBER(5),time2 timestamp);
+create table c_process (num number(5), tf3 number(1), temperature number(5),weight number, SC3 NUMBER(5), FC3 NUMBER(5),time3 timestamp);
+create table total (num number(5),process VARCHAR2(10),ERROR VARCHAR2(50),time timestamp);
+CREATE SEQUENCE PROCESS_SEQ START WITH 1 INCREMENT BY 1 MAXVALUE 10000 CYCLE;
+
+SELECT * FROM login;
+SELECT * FROM b_process;
+SELECT * FROM c_process;
+SELECT * FROM total;
+SELECT count(*) FROM a_process;
+SELECT count(*) FROM b_process;
+SELECT count(*) FROM c_process WHERE TF3='0';
+SELECT count(*) FROM total;
+select * from total order by TIME;
+select * from total order by NUM;
+ 
+drop table a_process;
+drop table b_process;
+drop table c_process;
+drop table total;
+drop table login;
+drop sequence process_seq;
+
+desc total;
+
+desc a_process
+
+SELECT num, tf1 FROM a_process;
+
+SELECT count(*) FROM a_process num;
+
+SELECT(SELECT sc FROM (SELECT sc FROM a_process ORDER BY time1 DESC)WHERE ROWNUM = 1) AS sc_value,(SELECT COUNT(*)FROM a_process) AS total_count FROM dual;
+
+SELECT
+  (SELECT sc FROM (SELECT sc FROM a_process ORDER BY time1 DESC) WHERE ROWNUM = 1) AS sc_value,
+  (SELECT COUNT(*) FROM a_process) AS total_count
+FROM dual;
+
+TRUNCATE TABLE a_process;
+TRUNCATE TABLE b_process;
+TRUNCATE TABLE c_process;
+truncate table total;
+drop sequence process_seq;
+CREATE SEQUENCE PROCESS_SEQ START WITH 1 INCREMENT BY 1 MAXVALUE 10000 CYCLE;
+
+insert into login values ('staff', 'staff123', 'staff');
+insert into login values ('admin', 'admin123', 'admin');
+
+insert into board values('2023071901',50,5000,'Y',2);
+
+insert into board values('2023071902', 45, 4200, 'N', 1);
+insert into board values('2023071903', 60, 6000, 'Y', 3);
+insert into board values('2023071904', 35, 3200, 'N', 4);
+insert into board values('2023071905', 55, 5100, 'Y', 2);
+insert into board values('2023071906', 42, 3900, 'N', 3);
+insert into board values('2023071907', 48, 4500, 'Y', 1);
+insert into board values('2023071908', 38, 3500, 'N', 4);
+insert into board values('2023071909', 58, 5400, 'Y', 2);
+insert into board values('2023071910', 41, 4100, 'N', 3);
+insert into board values('2023071911', 52, 4800, 'Y', 1);
+
+CREATE TABLE board (
+    BATCHNUMBER   VARCHAR2(20) primary key,
+    SPECIFICATION NUMBER(3),
+    LENGTH        NUMBER(5),
+    PATTERN       CHAR(1),
+    ROLLAMOUNT    NUMBER(5)
+);
+
+commit;
