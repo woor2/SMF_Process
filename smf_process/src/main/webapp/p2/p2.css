@@ -1,0 +1,35 @@
+ .container {
+            display: flex; /* 使用 flexbox 布局 */
+        }
+        .left-div {
+            width: 20%; /* 两个 div 各占一半宽度 */
+            padding: 20px; /* 可根据需要进行调整 */
+        }
+        .right-div{
+        	width:90%;
+        	padding:20px;
+        }
+ .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .menu li a {
+            display: block;
+            padding: 10px;
+            background-color: #f2f2f2;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .menu li a:hover {
+            background-color: #ccc;
+        }
+        

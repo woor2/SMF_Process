@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+  body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #58666e;
+	background-color: #FFFFFF;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+  .wrap {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 35vh 55vh;
+    height: 100vh;
+  }
+  .wrap > div {
+    width: 100%;
+  }
+  
+  .grid1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+    top: 60px;
+	bottom: 0;
+	width: 250px;
+	padding-top: 25px;
+	background-color: #333;
+  }
+  .grid1 > ul > li > a {
+  	display: block;
+	color: #fff;
+	padding: 10px 0 10px 20px;
+  }
+  .grid1 > ul > li > a.active {
+  background-color: #4CAF50;
+  }
+  .grid1 > ul > li > a:hover:not(.active) {
+  background-color: #555;
+  }
+  .grid1 > h1 {
+  color: #fff;
+  padding: 20px 0 20px 20px;
+  }
+  
+  
+  .grid2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    background: #f5f5f5;
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+  }
+  .grid3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    background: #f5f5f5;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid4 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+    background: #f5f5f5;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid5 {
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 1;
+    background: #f5f5f5;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid6 {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    background: #f5f5f5;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid7 {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+    background: #f5f5f5;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid8 {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 1;
+    background: #f5f5f5;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid9 {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+    background: #f5f5f5;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid10 {
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 1;
+    background: #f5f5f5;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .header {
+    top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	z-index: 2000;
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 25px;
+	
+	line-height: 60px;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 30px;
+  }
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+	color: #fff;
+	padding: 10px 0 10px 20px;
+  }
+  #chart-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  #chart-container1 {
+    height: 100%;
+    overflow: hidden;
+  }
+  #chart-container2 {
+    position: relative;
+    height: 100%;
+    width: 1000px;
+  }
+  #temp {
+    position: relative;
+    height: 100%;
+    width: 1000px;
+  }
+  .styled-table-head {
+      position: sticky;
+      top: 0;
+  }
+  .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #ddd;
+      font-size: 18px;
+  }
+  .styled-table th,
+  .styled-table td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .styled-table th { 
+      background-color: #f2f2f2;
+  }
+
+  footer {
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	padding: 0 25px;
+	line-height: 60px;
+	color: #8a8c8f;
+	border-top: 1px solid #dee5e7;
+	background-color: #f2f2f2;
+}
+
+	.logo {
+		height: 36px;
+	}
+	
+	.logo > img {
+		height: 36px;
+	}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 10px 5px;
+}
+
+h1 {
+	font-size: 1.8em;
+}

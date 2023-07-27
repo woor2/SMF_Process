@@ -1,0 +1,37 @@
+@charset "UTF-8";
+ .flipped-video {
+                transform: scaleX(-1);
+            }
+            .scroll-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+            .rec-overlay {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 24px;
+                color: red;
+                font-weight: bold;
+            }
+            .blink::before {
+                content: "●";
+                animation: blink 1s infinite;
+            }
+            @keyframes blink {
+                0% {
+                    content: "●";
+                }
+                50% {
+                    content: "○";
+                }
+                100% {
+                    content: "●";
+                }
+            }
+            #videoElement {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
